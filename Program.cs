@@ -6,8 +6,6 @@ namespace homeWorkOutputName
     {
         static void Main(string[] args)
         {
-            int numberString = 3;
-            int sizeNumberSimbol = 2;
             string inputUserName;
             char inputUserSimbol;
 
@@ -16,23 +14,17 @@ namespace homeWorkOutputName
             Console.Write("Enter the desired simbol: ");
             inputUserSimbol = Convert.ToChar(Console.ReadLine());
 
-            for (int i = 0; i < numberString; i++)
-            {
-                if (i == numberString - sizeNumberSimbol)
-                {
-                    Console.WriteLine($"{inputUserSimbol}{inputUserName}{inputUserSimbol}");
-                    continue;
-                }
-                for (int j = 0; j < inputUserName.Length + sizeNumberSimbol; j++)
-                {
-                    Console.Write(inputUserSimbol);
+            string nameSimbol = ($"{inputUserSimbol}{inputUserName}{inputUserSimbol}");
+            string simbolString = string.Empty;
 
-                    if (j == inputUserName.Length + 1)
-                    {
-                        Console.WriteLine();
-                    }
-                }
+            for (int i = 0; i < nameSimbol.Length; i++)
+            {
+                simbolString += inputUserSimbol;
             }
+
+            Console.WriteLine(simbolString);
+            Console.WriteLine(nameSimbol);
+            Console.WriteLine(simbolString);
         }
     }
 }
